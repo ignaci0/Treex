@@ -7,7 +7,11 @@ defmodule Treex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      package: package(),
+      name: "Treex",
+      source_url: "https://github.com/ignaci0/treex"
     ]
   end
 
@@ -22,6 +26,21 @@ defmodule Treex.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.19", only: :dev, runtime: false}
+    ]
+  end
+
+  defp description() do
+    """
+    An Elixir wrapper to the Erlang's `:gb_trees` module.
+
+    It also provides stream/1 on top
+    """
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/ignaci0/treex"}
     ]
   end
 end
