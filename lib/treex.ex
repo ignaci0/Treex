@@ -302,9 +302,9 @@ defmodule Treex do
 
   Each value returned by the stream shall be a `{key, value}`
   tuple. The exact same behaviour can be implemented
-  by using the iterator/1.
+  by using the `iterator/1`.
 
-  Example:
+  For example, the following code:
 
   ```elixir
   Treex.empty()
@@ -314,7 +314,7 @@ defmodule Treex do
     |> Treex.stream()
     |> Enum.reduce(0, fn({_k, v}, acc) -> acc+v end)
   ```
-  returns `6`
+  It will return `6`
   """
   def stream(tree) do
     Stream.resource(
