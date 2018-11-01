@@ -4,7 +4,7 @@ defmodule Treex.MixProject do
   def project do
     [
       app: :treex,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -31,7 +31,7 @@ defmodule Treex.MixProject do
 
   defp description() do
     """
-    An Elixir wrapper to the Erlang's `:gb_trees` module.
+    An Elixir wrapper to the Erlang's :gb_trees module.
 
     It also provides stream/1 on top
     """
